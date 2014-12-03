@@ -1,0 +1,8 @@
+###
+#
+# Gitignore for Pixelart Testproject
+#
+###
+
+src/img/*
+src/fonts/*
