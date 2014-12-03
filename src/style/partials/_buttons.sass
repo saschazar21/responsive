@@ -1,0 +1,39 @@
+$light-grey: #9f9f9f
+$dark-grey: #929292
+
+$light-red: #fe0606
+$dark-red: #cd0606
+
+=background-gradient($start, $end)
+  background-color: $start        /* Fallback to color */
+  background-image: -webkit-gradient(linear, from($start), to($end))
+  background-image: -webkit-linear-gradient($start, $end)
+  background-image: -moz-linear-gradient($start, $end)
+  background-image: -o-linear-gradient($start, $end)
+  background-image: linear-gradient($start, $end)
+
+=border-radius()
+  border: 1px solid white
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+
+=box-shadow()
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3)
+  -o-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3)
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3)
+
+button
+  color: white
+
+  .danger
+    +border-radius()
+    +background-gradient($light-red, $dark-red)
+    +box-shadow()
+
+  .locked
+    +border-radius()
+    +background-gradient($light-grey, $dark-grey)
+    +box-shadow()
+

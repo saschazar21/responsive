@@ -1,0 +1,43 @@
+@font-face
+  font-family: 'Frutiger LT Std Bold'
+  src: url('src/fonts/FrutigerLTStd-Bold.otf') type('opentype')
+
+@font-face
+  font-family: 'Frutiger LT Std Light'
+  src: url('src/fonts/FrutigerLTStd-Light.otf') type('opentype')
+
+@font-face
+  font-family: 'Frutiger LT Std Roman'
+  src: url('src/fonts/FrutigerLTStd-Roman.otf') type('opentype')
+
+$bold: 'Frutiger LT Std Bold', sans-serif
+$light: 'Frutiger LT Std Light', sans-serif
+$roman: 'Frutiger LT Std Roman', sans-serif
+
+$dark-grey: #454545
+$light-grey:  #868686
+
+body
+  font-family: $light
+  font-size: 13pt
+  color: $dark-grey
+
+h1
+  font-family: $bold
+  font-size: 38pt
+  text-transform: uppercase
+
+h2
+  @extend h1
+  font-size: 30pt
+
+h3
+  @extend h2
+  font-size: 24pt
+
+h4
+  @extend h3
+  font-size: 17pt
+
+.locked
+  color: $light-grey
