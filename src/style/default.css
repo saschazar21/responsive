@@ -5420,6 +5420,9 @@ h4 {
 .locked {
   color: #868686; }
 
+p .main {
+  font-weight: bold; }
+
 button {
   color: white; }
   button .danger {
@@ -5458,5 +5461,16 @@ img {
   -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3); }
+
+div .header-image {
+  background-size: cover;
+  background-image: url("./src/img/bezier.png"); }
+
+div .legend {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #9f9f9f; }
+  div .legend .pull-right {
+    border-right: 1px solid #9f9f9f; }
 
 /*# sourceMappingURL=default.css.map */
