@@ -5468,9 +5468,10 @@ div .header-image {
 
 div .legend {
   margin-top: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #9f9f9f; }
+  margin-bottom: 10px; }
   div .legend .pull-right {
     border-right: 1px solid #9f9f9f; }
+div .row {
+  border-top: 1px solid #9f9f9f; }
 
 /*# sourceMappingURL=default.css.map */
