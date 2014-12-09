@@ -7,3 +7,5 @@
 src/img/*
 src/fonts/*
 src/style/.sass-cache
+
+views/tmp/*
