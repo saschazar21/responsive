@@ -24,19 +24,22 @@ $dark-red: #cd0606
   -o-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3)
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3)
 
+button
+  font-weight: bold
+    
 .danger
-  +border-radius()
-  +background-gradient($light-red, $dark-red)
-  +box-shadow()
   
   button
     color: white
+    +border-radius()
+    +background-gradient($light-red, $dark-red)
+    +box-shadow()
 
 .locked
-  +border-radius()
-  +background-gradient($light-grey, $dark-grey)
-  +box-shadow()
   
   button
-    color: white
+    color: white 
+    +border-radius()
+    +background-gradient($light-grey, $dark-grey)
+    +box-shadow()
 

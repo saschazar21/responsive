@@ -19,25 +19,31 @@ $light-grey:  #868686
 
 body
   font-family: $light
-  font-size: 13pt
+  font-size: 10pt
   color: $dark-grey
 
 h1
   font-family: $bold
-  font-size: 38pt
+  font-weight: bold
+  font-size: 28pt
   text-transform: uppercase
 
 h2
   @extend h1
-  font-size: 30pt
+  font-size: 24pt
 
 h3
   @extend h2
-  font-size: 24pt
+  font-size: 14pt
+  
+  .legend
+    float: left
+    display: inline-block
+    vertical-align: middle
 
 h4
   @extend h3
-  font-size: 17pt
+  font-size: 14pt
   text-transform: none
     
   .entry

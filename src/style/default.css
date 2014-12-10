@@ -5400,22 +5400,27 @@ button.close {
   src: url("src/fonts/FrutigerLTStd-Roman.otf") type("opentype"); }
 body {
   font-family: "Frutiger LT Std Light", sans-serif;
-  font-size: 13pt;
+  font-size: 10pt;
   color: #454545; }
 
 h1, h2, h3, h4 {
   font-family: "Frutiger LT Std Bold", sans-serif;
-  font-size: 38pt;
+  font-weight: bold;
+  font-size: 28pt;
   text-transform: uppercase; }
 
 h2, h3, h4 {
-  font-size: 30pt; }
-
-h3, h4 {
   font-size: 24pt; }
 
+h3, h4 {
+  font-size: 14pt; }
+  h3 .legend, h4 .legend {
+    float: left;
+    display: inline-block;
+    vertical-align: middle; }
+
 h4 {
-  font-size: 17pt;
+  font-size: 14pt;
   text-transform: none; }
   h4 .entry {
     font-family: "Frutiger LT Std Light", sans-serif; }
@@ -5426,7 +5431,11 @@ h4 {
 p .main {
   font-weight: bold; }
 
-.danger {
+button {
+  font-weight: bold; }
+
+.danger button {
+  color: white;
   border: 1px solid white;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -5441,10 +5450,9 @@ p .main {
   -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3); }
-  .danger button {
-    color: white; }
 
-.locked {
+.locked button {
+  color: white;
   border: 1px solid white;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -5459,22 +5467,22 @@ p .main {
   -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3); }
-  .locked button {
-    color: white; }
 
-img {
-  -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3); }
+.legend img {
+  float: left; }
 
 div .header-image {
   background-size: cover;
-  background-image: url("./src/img/bezier.png"); }
+  background-image: url("../img/bezier.png"); }
 
 div .legend {
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  padding: 5px; }
+  div .legend div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
   div .legend .pull-right {
     border-right: 1px solid #9f9f9f; }
 div .row {

@@ -6,6 +6,8 @@ Mustache_Autoloader::register();
 
 class Template extends Mustache_Engine {
   
+  public static $SITE_TITLE = "Salzburg AG";
+  
   private $entries;
   private $template;
   private $defines;
@@ -32,7 +34,8 @@ class Template extends Mustache_Engine {
   }
     
   public function render() {
-    return $this->template->render($this->entries);
+    $values = array("title" => Template::$SITE_TITLE, "entries" => $this->entries);
+    return $this->template->render($values);
   }
 }
 
