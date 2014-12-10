@@ -4,7 +4,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-body, .footer-nav a, .footer-nav a:visited {
+body {
   margin: 0; }
 
 article,
@@ -894,7 +894,7 @@ html {
   font-size: 10px;
   -webkit-tap-highlight-color: transparent; }
 
-body, .footer-nav a, .footer-nav a:visited {
+body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
@@ -5427,7 +5427,7 @@ button.close {
 @font-face {
   font-family: "Frutiger LT Std Roman";
   src: url("src/fonts/FrutigerLTStd-Roman.otf") type("opentype"); }
-body, .footer-nav a, .footer-nav a:visited {
+body {
   font-family: "Frutiger LT Std Light", sans-serif;
   font-size: 10pt;
   color: #454545; }
@@ -5469,12 +5469,12 @@ p .main {
 .footer-nav {
   font-size: 8pt; }
   .footer-nav a {
+    font-family: "Frutiger LT Std Light", sans-serif;
+    color: #454545;
     font-size: 8pt; }
   .footer-nav a:hover {
     color: #cd0606;
     text-decoration: none; }
-  .footer-nav a:visited {
-    font-size: 8pt; }
 
 button {
   font-weight: bold; }
@@ -5519,6 +5519,12 @@ button {
 div .header-image {
   background-size: cover;
   background-image: url("../img/bezier.png"); }
+
+body {
+  -webkit-box-shadow: inset 0px 70px 100px -20px #9f9f9f;
+  -moz-box-shadow: inset 0px 70px 100px -20px #9f9f9f;
+  -o-box-shadow: inset 0px 70px 100px -20px #9f9f9f;
+  box-shadow: inset 0px 70px 100px -20px #9f9f9f; }
 
 div.container {
   padding: 40px 0px; }

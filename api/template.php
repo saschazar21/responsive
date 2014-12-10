@@ -71,7 +71,7 @@ class Template extends Mustache_Engine {
   }
     
   public function render() {
-    $this->deleteOldEntries();
+    //$this->deleteOldEntries();
     $globals = new RegisterGlobals();
     $values = array("title" => $globals->getTitle(), "curryear" => $globals->getCurrYear(), "siteowner" => $globals->getSiteOwner(), "footer-links" => $globals->getFooterLinks(), "entries" => $this->entries);
     return $this->template->render($values);

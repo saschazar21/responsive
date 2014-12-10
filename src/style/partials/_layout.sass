@@ -4,6 +4,15 @@
   -o-box-shadow: 0px $y $blur $offset $dark-grey
   box-shadow: 0px $y $blur $offset $dark-grey
   
+=inset-box-shadow($y, $blur, $offset) 
+  -webkit-box-shadow: inset 0px $y $blur $offset $light-grey
+  -moz-box-shadow: inset 0px $y $blur $offset $light-grey
+  -o-box-shadow: inset 0px $y $blur $offset $light-grey
+  box-shadow: inset 0px $y $blur $offset $light-grey
+  
+body
+  +inset-box-shadow(70px, 100px, -20px)
+  
 div.container
   padding: 40px 0px
 
