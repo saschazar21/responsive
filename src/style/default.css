@@ -4,7 +4,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-body {
+body, .footer-nav a, .footer-nav a:visited {
   margin: 0; }
 
 article,
@@ -54,7 +54,7 @@ strong {
 dfn {
   font-style: italic; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h3.entry, h3.legend, h4, h4.entry {
   font-size: 2em;
   margin: 0.67em 0; }
 
@@ -221,15 +221,24 @@ th {
   p,
   h2,
   h3,
+  h3.entry,
+  h3.legend,
   h4,
+  h4.entry,
   h3,
-  h4 {
+  h3.entry,
+  h3.legend,
+  h4,
+  h4.entry {
     orphans: 3;
     widows: 3; }
 
-  h2, h3, h4,
+  h2, h3, h3.entry, h3.legend, h4, h4.entry,
   h3,
-  h4 {
+  h3.entry,
+  h3.legend,
+  h4,
+  h4.entry {
     page-break-after: avoid; }
 
   select {
@@ -885,7 +894,7 @@ html {
   font-size: 10px;
   -webkit-tap-highlight-color: transparent; }
 
-body {
+body, .footer-nav a, .footer-nav a:visited {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
@@ -965,22 +974,22 @@ hr {
   overflow: visible;
   clip: auto; }
 
-h1, h2, h3, h4, h2, h3, h4, h3, h4, h4, h5, h6,
+h1, h2, h3, h3.entry, h3.legend, h4, h4.entry, h2, h3, h3.entry, h3.legend, h4, h4.entry, h3, h3.entry, h3.legend, h4, h4.entry, h4, h4.entry, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
-  h1 small, h2 small, h3 small, h4 small,
+  h1 small, h2 small, h3 small, h3.entry small, h3.legend small, h4 small, h4.entry small,
   h1 .small,
   h2 .small,
   h3 .small,
-  h4 .small, h2 small, h3 small, h4 small,
+  h4 .small, h2 small, h3 small, h3.entry small, h3.legend small, h4 small, h4.entry small,
   h2 .small,
   h3 .small,
-  h4 .small, h3 small, h4 small,
+  h4 .small, h3 small, h3.entry small, h3.legend small, h4 small, h4.entry small,
   h3 .small,
-  h4 .small, h4 small,
+  h4 .small, h4 small, h4.entry small,
   h4 .small, h5 small,
   h5 .small, h6 small,
   h6 .small,
@@ -995,15 +1004,21 @@ h1, h2, h3, h4, h2, h3, h4, h3, h4, h4, h5, h6,
     line-height: 1;
     color: #777777; }
 
-h1, h2, h3, h4, .h1,
+h1, h2, h3, h3.entry, h3.legend, h4, h4.entry, .h1,
 h2,
 h3,
-h4, .h2,
+h3.entry,
+h3.legend,
+h4,
+h4.entry, .h2,
 h3,
-h4, .h3 {
+h3.entry,
+h3.legend,
+h4,
+h4.entry, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
-  h1 small, h2 small, h3 small, h4 small,
+  h1 small, h2 small, h3 small, h3.entry small, h3.legend small, h4 small, h4.entry small,
   h1 .small,
   h2 .small,
   h3 .small,
@@ -1011,24 +1026,30 @@ h4, .h3 {
   .h1 .small,
   h2 small,
   h3 small,
+  h3.entry small,
+  h3.legend small,
   h4 small,
+  h4.entry small,
   h2 .small,
   h3 .small,
   h4 .small, .h2 small,
   .h2 .small,
   h3 small,
+  h3.entry small,
+  h3.legend small,
   h4 small,
+  h4.entry small,
   h3 .small,
   h4 .small, .h3 small,
   .h3 .small {
     font-size: 65%; }
 
-h4, .h4,
+h4, h4.entry, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 10px;
   margin-bottom: 10px; }
-  h4 small,
+  h4 small, h4.entry small,
   h4 .small, .h4 small,
   .h4 .small,
   h5 small,
@@ -1039,16 +1060,16 @@ h6, .h6 {
   .h6 .small {
     font-size: 75%; }
 
-h1, h2, h3, h4, .h1 {
+h1, h2, h3, h3.entry, h3.legend, h4, h4.entry, .h1 {
   font-size: 36px; }
 
-h2, h3, h4, .h2 {
+h2, h3, h3.entry, h3.legend, h4, h4.entry, .h2 {
   font-size: 30px; }
 
-h3, h4, .h3 {
+h3, h3.entry, h3.legend, h4, h4.entry, .h3 {
   font-size: 24px; }
 
-h4, .h4 {
+h4, h4.entry, .h4 {
   font-size: 18px; }
 
 h5, .h5 {
@@ -1258,7 +1279,8 @@ blockquote {
       content: '\2014 \00A0'; }
 
 .blockquote-reverse,
-blockquote.pull-right {
+blockquote.pull-right,
+div .legend blockquote.right-wrapper {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #eeeeee;
@@ -1268,15 +1290,21 @@ blockquote.pull-right {
   .blockquote-reverse small:before,
   .blockquote-reverse .small:before,
   blockquote.pull-right footer:before,
+  div .legend blockquote.right-wrapper footer:before,
   blockquote.pull-right small:before,
-  blockquote.pull-right .small:before {
+  div .legend blockquote.right-wrapper small:before,
+  blockquote.pull-right .small:before,
+  div .legend blockquote.right-wrapper .small:before {
     content: ''; }
   .blockquote-reverse footer:after,
   .blockquote-reverse small:after,
   .blockquote-reverse .small:after,
   blockquote.pull-right footer:after,
+  div .legend blockquote.right-wrapper footer:after,
   blockquote.pull-right small:after,
-  blockquote.pull-right .small:after {
+  div .legend blockquote.right-wrapper small:after,
+  blockquote.pull-right .small:after,
+  div .legend blockquote.right-wrapper .small:after {
     content: '\00A0 \2014'; }
 
 address {
@@ -2898,7 +2926,7 @@ tbody.collapse.in {
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
-  .dropdown-menu.pull-right {
+  .dropdown-menu.pull-right, div .legend .dropdown-menu.right-wrapper {
     right: 0;
     left: auto; }
   .dropdown-menu .divider {
@@ -2964,7 +2992,7 @@ tbody.collapse.in {
   top: 0;
   z-index: 990; }
 
-.pull-right > .dropdown-menu {
+.pull-right > .dropdown-menu, div .legend .right-wrapper > .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -4179,7 +4207,8 @@ a.thumbnail.active {
     margin-top: 0; }
 
 .media-right,
-.media > .pull-right {
+.media > .pull-right,
+div .legend .media > .right-wrapper {
   padding-left: 10px; }
 
 .media-left,
@@ -5192,7 +5221,7 @@ button.close {
   margin-left: auto;
   margin-right: auto; }
 
-.pull-right {
+.pull-right, div .legend .right-wrapper {
   float: right !important; }
 
 .pull-left {
@@ -5398,38 +5427,54 @@ button.close {
 @font-face {
   font-family: "Frutiger LT Std Roman";
   src: url("src/fonts/FrutigerLTStd-Roman.otf") type("opentype"); }
-body {
+body, .footer-nav a, .footer-nav a:visited {
   font-family: "Frutiger LT Std Light", sans-serif;
   font-size: 10pt;
   color: #454545; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h3.entry, h3.legend, h4, h4.entry {
   font-family: "Frutiger LT Std Bold", sans-serif;
   font-weight: bold;
   font-size: 28pt;
   text-transform: uppercase; }
 
-h2, h3, h4 {
+h2, h3, h3.entry, h3.legend, h4, h4.entry {
   font-size: 24pt; }
 
-h3, h4 {
+h3, h3.entry, h3.legend, h4, h4.entry {
   font-size: 14pt; }
-  h3 .legend, h4 .legend {
-    float: left;
-    display: inline-block;
-    vertical-align: middle; }
 
-h4 {
+h3.entry, h4.entry {
+  margin-top: 0px; }
+
+h3.legend, h4.legend {
+  padding: 0px 10px;
+  float: left;
+  display: inline-block;
+  vertical-align: middle; }
+
+h4, h4.entry {
   font-size: 14pt;
   text-transform: none; }
-  h4 .entry {
-    font-family: "Frutiger LT Std Light", sans-serif; }
+
+h4.entry {
+  font-weight: normal; }
 
 .locked {
   color: #868686; }
 
 p .main {
   font-weight: bold; }
+
+.footer-nav {
+  font-size: 8pt; }
+  .footer-nav a {
+    font-size: 8pt; }
+  .footer-nav a:hover {
+    color: #cd0606;
+    text-decoration: none; }
+  .footer-nav a:visited {
+    font-size: 8pt; }
 
 button {
   font-weight: bold; }
@@ -5475,17 +5520,37 @@ div .header-image {
   background-size: cover;
   background-image: url("../img/bezier.png"); }
 
-div .legend {
+div.container {
+  padding: 40px 0px; }
+
+div .row.legend {
+  -webkit-box-shadow: 0px -15px 20px -15px #929292;
+  -moz-box-shadow: 0px -15px 20px -15px #929292;
+  -o-box-shadow: 0px -15px 20px -15px #929292;
+  box-shadow: 0px -15px 20px -15px #929292;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 5px; }
-  div .legend div {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-  div .legend .pull-right {
-    border-right: 1px solid #9f9f9f; }
-div .row {
-  border-top: 1px solid #9f9f9f; }
+  padding: 20px 0px; }
+div .legend div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+div .row.footer {
+  padding: 10px 0px;
+  border-bottom: 5px solid #cd0606; }
+
+div.entry .entry-content {
+  margin: 20px 0px; }
+
+ul.footer-nav {
+  padding: 0px; }
+  ul.footer-nav li:before {
+    content: "> ";
+    color: #cd0606;
+    font-weight: bold; }
+  ul.footer-nav li {
+    margin-right: 10px;
+    float: left;
+    list-style: none; }
 
 /*# sourceMappingURL=default.css.map */

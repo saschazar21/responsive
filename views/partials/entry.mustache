@@ -1,21 +1,21 @@
-<div class="col-xs-2 col-md-2">
+<div class="col-xs-1 col-md-1 entry-content">
   {{# baustelle}}
-    <img src="./src/img/icon1.png" alt="Leitkegel" class="img-responsive">
+    <img src="./src/img/icon1.png" alt="Leitkegel" class="entry">
   {{/ baustelle}}
   {{# sonstiges}}
-    <img src="./src/img/icon2.png" alt="Bauarbeiter" class="img-responsive">
+    <img src="./src/img/icon2.png" alt="Bauarbeiter" class="entry">
   {{/ sonstiges}}
   {{# sperre }}
-    <img src="./src/img/icon3.png" alt="Bauarbeiter" class="img-responsive">
+    <img src="./src/img/icon3.png" alt="Bauarbeiter" class="entry">
   {{/ sperre }}
 </div>
-<div class="col-xs-10 col-md-10 {{# sperre}} locked {{/ sperre}} {{^ sperre}} danger {{/ sperre}}">
-  <div class="col-xs-12 col-md-8">
+<div class="col-xs-11 col-md-11 {{# sperre}} locked {{/ sperre}} {{^ sperre}} danger {{/ sperre}}">
+  <div class="col-xs-12 col-md-6 entry-content">
     <h3 class="entry">{{titel}}</h3>
     <h4 class="entry">{{art}}</h4>
     <p class="entry">{{text}}</p>
   </div>
-  <div class="col-xs-12 col-md-4">
+  <div class="col-xs-12 col-md-4 entry-content pull-right">
     <h3 class="entry">Einschränkungszeitraum</h3>
     {{# zeitraum}}
       <p class="entry">

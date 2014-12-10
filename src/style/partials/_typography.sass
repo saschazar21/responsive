@@ -17,6 +17,10 @@ $roman: 'Frutiger LT Std Roman', sans-serif
 $dark-grey: #454545
 $light-grey:  #868686
 
+$light-red: #fe0606
+$dark-red: #cd0606
+
+
 body
   font-family: $light
   font-size: 10pt
@@ -35,19 +39,26 @@ h2
 h3
   @extend h2
   font-size: 14pt
+    
+h3.entry
+  @extend h3
+  margin-top: 0px
   
-  .legend
-    float: left
-    display: inline-block
-    vertical-align: middle
+h3.legend
+  @extend h3
+  padding: 0px 10px
+  float: left
+  display: inline-block
+  vertical-align: middle
 
 h4
   @extend h3
   font-size: 14pt
   text-transform: none
     
-  .entry
-    font-family: $light  
+h4.entry
+  @extend h4
+  font-weight: normal  
 
 .locked
   color: $light-grey
@@ -56,3 +67,19 @@ p
   
   .main
     font-weight: bold
+      
+.footer-nav
+  font-size: 8pt
+    
+  a
+    @extend body
+    font-size: 8pt
+      
+  a:hover
+    color: $dark-red
+    text-decoration: none
+
+  a:visited
+    @extend body
+    font-size: 8pt
+  

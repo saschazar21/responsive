@@ -1,15 +1,52 @@
+=layout-box-shadow($y, $blur, $offset) 
+  -webkit-box-shadow: 0px $y $blur $offset $dark-grey
+  -moz-box-shadow: 0px $y $blur $offset $dark-grey
+  -o-box-shadow: 0px $y $blur $offset $dark-grey
+  box-shadow: 0px $y $blur $offset $dark-grey
+  
+div.container
+  padding: 40px 0px
+
 div
   
-  .legend
+  .row.legend
+    +layout-box-shadow(-15px, 20px, -15px)
     margin-top: 10px
     margin-bottom: 10px
-    padding: 5px
+    padding: 20px 0px
+  
+  .legend > :not(:last-child)
+    //border-right: 1px solid $light-grey
+      
+  .legend
     
+    .right-wrapper
+      @extend .pull-right
+        
     div
       +center-block()
-      
-    .pull-right
-      border-right: 1px solid $light-grey
         
   .row
-    border-top: 1px solid $light-grey
+    //border-top: 1px solid $light-grey
+    
+  .row.footer
+    padding: 10px 0px
+    border-bottom: 5px solid $dark-red
+      
+div.entry
+  
+  .entry-content
+    margin: 20px 0px
+    
+ul.footer-nav
+  padding: 0px
+  
+  li:before
+    content: "> "
+    color: $dark-red
+    font-weight: bold
+    
+  li
+    margin-right: 10px
+    float: left
+    list-style: none
