@@ -12,7 +12,7 @@ class RegisterGlobals {
   private $footerlinks;
   
   public function __construct() {
-    $this->constructor("Salzburg", "2014", "Salzburg AG für Energie, Verkehr und Telekommunikation", array(
+    $this->constructor("Salzburg AG", date('Y'), "Salzburg AG für Energie, Verkehr und Telekommunikation", array(
       array("name" => "AGB", "link" => "agb"),
       array("name" => "Datenschutz und Impressum", "link" => "impressum"),
       array("name" => "Kontakt", "link" => "kontakt")
@@ -71,9 +71,28 @@ class Template extends Mustache_Engine {
   }
     
   public function render() {
+    $this->deleteOldEntries();
     $globals = new RegisterGlobals();
     $values = array("title" => $globals->getTitle(), "curryear" => $globals->getCurrYear(), "siteowner" => $globals->getSiteOwner(), "footer-links" => $globals->getFooterLinks(), "entries" => $this->entries);
     return $this->template->render($values);
+  }
+  
+  private function deleteOldEntries() {
+    $iter = 0;
+    $now = strtotime("now");
+    foreach ($this->entries as $entry) {
+      $comparetime;
+      if (array_key_exists("datumende", $entry["zeitraum"])) {
+        $comparetime = strtotime($entry["zeitraum"]["datumende"] . ", " . $entry["zeitraum"]["zeitende"]);
+      } else {
+        $comparetime = strtotime($entry["zeitraum"]["datumstart"] . ", " . $entry["zeitraum"]["zeitende"]);
+      }
+      if ($now > $comparetime) {
+        array_splice($this->entries, $iter, 1);
+      } else {
+        $iter++;
+      }
+    }
   }
 }
 
